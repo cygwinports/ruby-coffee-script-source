@@ -1,7 +1,7 @@
 inherit rubygem
 
 NAME="ruby-coffee-script-source"
-VERSION=1.6.3
+VERSION=1.7.1
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby CoffeeScript compiler extension"
@@ -9,3 +9,10 @@ DESCRIPTION="CoffeeScript is a little language that compiles into JavaScript.
 Underneath all of those embarrassing braces and semicolons, JavaScript has
 always had a gorgeous object model at its heart. CoffeeScript is an attempt to
 expose the good parts of JavaScript in a simple way."
+
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_coffee_script_source_CONTENTS="${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_coffee_script_source_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
+
